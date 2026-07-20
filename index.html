@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ular Tangga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HALAMAN SETUP -->
+    <div id="setup-screen" class="retro-panel">
+        <h1 class="title-text">Ular Tangga</h1>
+        <p class="subtitle">Create by Kkael</p>
+        <div class="input-group">
+            <label>Jumlah Pemain</label>
+            <select id="player-count" onchange="generatePlayerInputs()">
+                <option value="2">2 Pemain</option>
+                <option value="3">3 Pemain</option>
+                <option value="4">4 Pemain</option>
+            </select>
+        </div>
+        <div id="player-inputs"></div>
+        <button class="btn-wood" onclick="startGame()">Mulai Bermain</button>
+    </div>
+
+    <!-- HALAMAN GAME (LUDO KING LAYOUT) -->
+    <div id="game-screen" style="display: none;">
+        <div class="game-layout">
+            
+            <!-- PLAYER 3 (Kiri Atas) -->
+            <div class="player-panel panel-2" id="panel-2" onclick="playTurn(2)">
+                <div class="player-info">
+                    <div class="avatar" id="avatar-2"></div>
+                    <span class="p-name" id="name-2">Player 3</span>
+                </div>
+                <div class="dice-wrapper" id="dice-wrapper-2"><div class="dice" id="dice-2"></div></div>
+            </div>
+
+            <!-- PLAYER 4 (Kanan Atas) -->
+            <div class="player-panel panel-3" id="panel-3" onclick="playTurn(3)">
+                <div class="player-info">
+                    <span class="p-name" id="name-3">Player 4</span>
+                    <div class="avatar" id="avatar-3"></div>
+                </div>
+                <div class="dice-wrapper" id="dice-wrapper-3"><div class="dice" id="dice-3"></div></div>
+            </div>
+
+            <!-- AREA PAPAN (Tengah) -->
+            <div class="board-container">
+                <div class="board-wrapper">
+                    <div id="board"></div>
+                    <svg id="svg-layer" viewBox="0 0 100 100"></svg>
+                    <div id="pawns-layer"></div>
+                </div>
+            </div>
+
+            <!-- PLAYER 1 (Kiri Bawah) -->
+            <div class="player-panel panel-0" id="panel-0" onclick="playTurn(0)">
+                <div class="player-info">
+                    <div class="avatar" id="avatar-0"></div>
+                    <span class="p-name" id="name-0">Player 1</span>
+                </div>
+                <div class="dice-wrapper" id="dice-wrapper-0"><div class="dice" id="dice-0"></div></div>
+            </div>
+
+            <!-- PLAYER 2 (Kanan Bawah) -->
+            <div class="player-panel panel-1" id="panel-1" onclick="playTurn(1)">
+                <div class="player-info">
+                    <span class="p-name" id="name-1">Player 2</span>
+                    <div class="avatar" id="avatar-1"></div>
+                </div>
+                <div class="dice-wrapper" id="dice-wrapper-1"><div class="dice" id="dice-1"></div></div>
+            </div>
+
+            <!-- LOG GAME (Bawah/Tengah) -->
+            <div class="retro-panel log-box">
+                <h3>📜 Catatan Permainan</h3>
+                <div id="game-log"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL WINNER -->
+    <div id="winner-modal">
+        <div class="modal-content retro-panel">
+            <h2 class="title-win">🎉 KEMENANGAN! 🎉</h2>
+            <p id="winner-text"></p>
+            <button class="btn-wood" onclick="location.reload()">Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
