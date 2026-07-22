@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ular Tangga 77</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- TOMBOL NAVIGASI POJOK KANAN ATAS LAYAR -->
+    <div class="global-top-actions">
+        <a href="https://kkael36.github.io/Monopoli-Indonesia/" class="btn-wood btn-global">
+            <i class="fa-solid fa-gamepad"></i> Monopoli Indonesia
+        </a>
+        <!-- PLACEHOLDER LINK DOWNLOAD -->
+        <a href="https://github.com/kkael36/Ular-Tangga-77/releases/download/v1.0.0/Ular.Tangga.77.apk" download class="btn-wood btn-global">
+            <i class="fa-solid fa-download"></i> Unduh
+        </a>
+    </div>
 
     <!-- HALAMAN SETUP -->
     <div id="setup-screen" class="retro-panel">
@@ -25,17 +40,19 @@
         <button class="btn-wood" onclick="startGame()">Mulai Bermain</button>
     </div>
 
-    <!-- HALAMAN GAME (LUDO KING LAYOUT) -->
+    <!-- HALAMAN GAME -->
     <div id="game-screen" style="display: none;">
         <div class="game-layout">
-            
+
             <!-- PLAYER 3 (Kiri Atas) -->
             <div class="player-panel panel-2" id="panel-2" onclick="playTurn(2)">
                 <div class="player-info">
                     <div class="avatar" id="avatar-2"></div>
                     <span class="p-name" id="name-2">Player 3</span>
                 </div>
-                <div class="dice-wrapper" id="dice-wrapper-2"><div class="dice" id="dice-2"></div></div>
+                <div class="dice-wrapper" id="dice-wrapper-2">
+                    <div class="dice" id="dice-2"></div>
+                </div>
             </div>
 
             <!-- PLAYER 4 (Kanan Atas) -->
@@ -44,7 +61,9 @@
                     <span class="p-name" id="name-3">Player 4</span>
                     <div class="avatar" id="avatar-3"></div>
                 </div>
-                <div class="dice-wrapper" id="dice-wrapper-3"><div class="dice" id="dice-3"></div></div>
+                <div class="dice-wrapper" id="dice-wrapper-3">
+                    <div class="dice" id="dice-3"></div>
+                </div>
             </div>
 
             <!-- AREA PAPAN (Tengah) -->
@@ -62,7 +81,9 @@
                     <div class="avatar" id="avatar-0"></div>
                     <span class="p-name" id="name-0">Player 1</span>
                 </div>
-                <div class="dice-wrapper" id="dice-wrapper-0"><div class="dice" id="dice-0"></div></div>
+                <div class="dice-wrapper" id="dice-wrapper-0">
+                    <div class="dice" id="dice-0"></div>
+                </div>
             </div>
 
             <!-- PLAYER 2 (Kanan Bawah) -->
@@ -71,7 +92,9 @@
                     <span class="p-name" id="name-1">Player 2</span>
                     <div class="avatar" id="avatar-1"></div>
                 </div>
-                <div class="dice-wrapper" id="dice-wrapper-1"><div class="dice" id="dice-1"></div></div>
+                <div class="dice-wrapper" id="dice-wrapper-1">
+                    <div class="dice" id="dice-1"></div>
+                </div>
             </div>
 
             <!-- LOG GAME (Bawah/Tengah) -->
@@ -94,4 +117,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

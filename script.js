@@ -452,3 +452,9 @@ function logMsg(msg, cssClass = "log-normal") {
     logBox.innerHTML += `<div class="log-entry ${cssClass}">${msg}</div>`;
     logBox.scrollTop = logBox.scrollHeight;
 }
+
+// --- TAMBAHAN: FUNGSI DOWNLOAD GAME ---
+function downloadGame(e) {
+    e.preventDefault();
+    alert("Fitur unduhan sedang disiapkan! Lu bisa bookmark atau install web ini via PWA / Add to Home Screen browser.");
+}
