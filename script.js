@@ -83,6 +83,7 @@ function startGame() {
                 nameSpan.style.fontSize = ""; 
             }
             
+            document.querySelector('.global-top-actions').style.display = 'none';
             document.getElementById(`avatar-${i}`).style.backgroundColor = players[i].color;
             document.getElementById(`dice-${i}`).innerHTML = getDiceHTML(1);
         } else {
